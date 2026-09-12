@@ -64,8 +64,13 @@ CerebroUI.prototype.buildStyles = function () {
 };
 
 CerebroUI.prototype.buildMarkup = function () {
+    document.documentElement.lang = 'pt-BR';
+
     var root = document.createElement('div');
     root.id = 'cerebro-root';
+    root.className = 'notranslate';
+    root.translate = false;
+    root.setAttribute('translate', 'no');
     root.innerHTML =
         '<canvas id="synapse-bg"></canvas>' +
         '<div class="frame">' +
